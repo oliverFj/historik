@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Watch History Timeline</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+
+    <div class="max-w-7xl mx-auto p-5">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5">
+            <select id="yearSelect" class="form-select block w-full sm:w-auto px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"></select>
+            <div id="slider" class="form-range appearance-none w-full h-6 p-0 bg-gray-200 rounded-full my-4 sm:my-0 sm:ml-4"></div>
+            <button id="playButton" class="w-full sm:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none my-4 sm:my-0 sm:ml-4">Play</button>
+        </div>
+        
+        <div id="dateDisplay" class="text-xl font-semibold mb-6 text-center"></div>
+
+        <div class="grid grid-cols-1 gap-4">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <svg id="vis1" width="100%" height="500"></svg>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <svg id="vis2" width="100%" height="500"></svg>
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="module" src="main.js"></script>
+    <script type="module" src="dataManager.js"></script>
+    <script type="module" src="barChart.js"></script>
+    
+
+    
+    <!-- <script src="timeline2.js"></script> -->
+</body>
+</html>
